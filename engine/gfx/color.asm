@@ -1,45 +1,51 @@
 INCLUDE "engine/gfx/sgb_layouts.asm"
 
-SHINY_ATK_BIT EQU 5
-SHINY_DEF_VAL EQU 10
-SHINY_SPD_VAL EQU 10
-SHINY_SPC_VAL EQU 10
-
 CheckShininess:
 ; Check if a mon is shiny by DVs at bc.
 ; Return carry if shiny.
+; 1 in 1024 wild Pokémon is shiny.
 
 	ld l, c
 	ld h, b
 
-; Attack
+; Attack must be odd (1, 3, 5, 7, 9, 11, 13, or 15) (1 in 2)
 	ld a, [hl]
-	and 1 << SHINY_ATK_BIT
-	jr z, .not_shiny
+	and 1 << 4
+	jr z, .NotShiny
 
-; Defense
+; Defense must be 9, 11, 13, or 15 (1 in 4)
 	ld a, [hli]
 	and $f
-	cp  SHINY_DEF_VAL
-	jr nz, .not_shiny
+	cp 9
+	jr z, .MaybeShiny1
+	cp 11
+	jr z, .MaybeShiny1
+	cp 13
+	jr z, .MaybeShiny1
+	cp 15
+	jr nz, .NotShiny
 
-; Speed
+; Speed must be 15 or 13 (1 in 8)
+.MaybeShiny1
 	ld a, [hl]
-	and $f0
-	cp  SHINY_SPD_VAL << 4
-	jr nz, .not_shiny
+	and $f << 4
+	cp 13 << 4
+	jr nz, .MaybeShiny2
+	cp 15 << 4
+	jr nz, .NotShiny
 
-; Special
+; Special must be 15  (1 in 16)
+.MaybeShiny2
 	ld a, [hl]
 	and $f
-	cp  SHINY_SPC_VAL
-	jr nz, .not_shiny
+	cp 15
+	jr nz, .NotShiny
 
-; shiny
+.Shiny:
 	scf
 	ret
 
-.not_shiny
+.NotShiny:
 	and a
 	ret
 
