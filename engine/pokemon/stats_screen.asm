@@ -1702,15 +1702,15 @@ CheckFaintedFrzSlp:
 	add hl, bc
 	ld a, [hli]
 	or [hl]
-	jr z, .fainted_frz_slp
+	jr z, .fainted_slp
 	ld hl, MON_STATUS
 	add hl, bc
 	ld a, [hl]
-	and 1 << FRZ | SLP
-	jr nz, .fainted_frz_slp
+	and SLP
+	jr nz, .fainted_slp
 	and a
 	ret
 
-.fainted_frz_slp
+.fainted_slp
 	scf
 	ret
