@@ -174,7 +174,7 @@ MoveNames::
 	li "FLAME WHEEL"
 	li "SNORE"
 	li "CURSE"
-	li "FLAIL"
+	li "NASTY PLOT"
 	li "CONVERSION2"
 	li "AEROBLAST"
 	li "COTTON SPORE"

@@ -36,7 +36,7 @@ SquirtleEggMoves:
 	db MIST
 	db CONFUSION
 	db FORESIGHT
-	db FLAIL
+	db REVERSAL
 	db -1 ; end
 
 PidgeyEggMoves:
@@ -71,7 +71,7 @@ EkansEggMoves:
 	db -1 ; end
 
 SandshrewEggMoves:
-	db FLAIL
+	db REVERSAL
 	db SAFEGUARD
 	db COUNTER
 	db RAPID_SPIN
@@ -101,7 +101,7 @@ NidoranMEggMoves:
 VulpixEggMoves:
 	db FAINT_ATTACK
 	db HYPNOSIS
-	db FLAIL
+	db REVERSAL
 	db SPITE
 	db DISABLE
 	db HOWL
@@ -118,7 +118,7 @@ ZubatEggMoves:
 OddishEggMoves:
 	db SWORDS_DANCE
 	db RAZOR_LEAF
-	db FLAIL
+	db REVERSAL
 	db SYNTHESIS
 	db -1 ; end
 
@@ -127,7 +127,7 @@ ParasEggMoves:
 	db SCREECH
 	db COUNTER
 	db PSYBEAM
-	db FLAIL
+	db REVERSAL
 	db LIGHT_SCREEN
 	db PURSUIT
 	db -1 ; end
@@ -243,7 +243,7 @@ FarfetchDEggMoves:
 	db MIRROR_MOVE
 	db GUST
 	db QUICK_ATTACK
-	db FLAIL
+	db REVERSAL
 	db -1 ; end
 
 DoduoEggMoves:
@@ -251,7 +251,7 @@ DoduoEggMoves:
 	db SUPERSONIC
 	db HAZE
 	db FAINT_ATTACK
-	db FLAIL
+	db REVERSAL
 	db -1 ; end
 
 SeelEggMoves:
@@ -285,7 +285,7 @@ GastlyEggMoves:
 
 OnixEggMoves:
 	db ROCK_SLIDE
-	db FLAIL
+	db REVERSAL
 	db -1 ; end
 
 DrowzeeEggMoves:
@@ -297,7 +297,7 @@ KrabbyEggMoves:
 	db DIG
 	db HAZE
 	db AMNESIA
-	db FLAIL
+	db REVERSAL
 	db SLAM
 	db -1 ; end
 
@@ -350,7 +350,7 @@ ChanseyEggMoves:
 	db -1 ; end
 
 TangelaEggMoves:
-	db FLAIL
+	db REVERSAL
 	db CONFUSION
 	db MEGA_DRAIN
 	db REFLECT
@@ -366,7 +366,7 @@ KangaskhanEggMoves:
 	db -1 ; end
 
 HorseaEggMoves:
-	db FLAIL
+	db REVERSAL
 	db AURORA_BEAM
 	db OCTAZOOKA
 	db DISABLE
@@ -397,7 +397,7 @@ ScytherEggMoves:
 
 PinsirEggMoves:
 	db FURY_ATTACK
-	db FLAIL
+	db REVERSAL
 	db -1 ; end
 
 LaprasEggMoves:
@@ -406,7 +406,7 @@ LaprasEggMoves:
 	db -1 ; end
 
 EeveeEggMoves:
-	db FLAIL
+	db REVERSAL
 	db CHARM
 	db -1 ; end
 
@@ -423,7 +423,7 @@ KabutoEggMoves:
 	db AURORA_BEAM
 	db RAPID_SPIN
 	db DIG
-	db FLAIL
+	db REVERSAL
 	db -1 ; end
 
 AerodactylEggMoves:
@@ -448,7 +448,7 @@ ChikoritaEggMoves:
 	db LEECH_SEED
 	db COUNTER
 	db ANCIENTPOWER
-	db FLAIL
+	db REVERSAL
 	db SWORDS_DANCE
 	db -1 ; end
 
@@ -502,7 +502,7 @@ SpinarakEggMoves:
 	db -1 ; end
 
 ChinchouEggMoves:
-	db FLAIL
+	db REVERSAL
 	db SUPERSONIC
 	db SCREECH
 	db -1 ; end
@@ -628,7 +628,7 @@ GirafarigEggMoves:
 PinecoEggMoves:
 	db REFLECT
 	db PIN_MISSILE
-	db FLAIL
+	db REVERSAL
 	db SWIFT
 	db -1 ; end
 
@@ -659,7 +659,7 @@ SnubbullEggMoves:
 	db -1 ; end
 
 QwilfishEggMoves:
-	db FLAIL
+	db REVERSAL
 	db HAZE
 	db BUBBLEBEAM
 	db SUPERSONIC
@@ -672,7 +672,7 @@ ShuckleEggMoves:
 HeracrossEggMoves:
 	db HARDEN
 	db BIDE
-	db FLAIL
+	db REVERSAL
 	db -1 ; end
 
 SneaselEggMoves:

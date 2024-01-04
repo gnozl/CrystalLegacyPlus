@@ -469,7 +469,7 @@ ClefableEvosAttacks:
 	db 0 ; no more level-up moves
 
 VulpixEvosAttacks:
-	db EVOLVE_LEVEL, 40, NINETALES
+	db EVOLVE_LEVEL, 35, NINETALES
 NinetalesEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, EMBER
@@ -482,7 +482,7 @@ NinetalesEvosAttacks:
 	db 32, FLAMETHROWER
 	db 37, SHADOW_BALL
 	db 40, SUNNY_DAY
-	db 45, FIRE_SPIN
+	db 45, NASTY_PLOT
 	db 60, FIRE_BLAST
 	db 0 ; no more level-up moves
 
@@ -688,28 +688,17 @@ DugtrioEvosAttacks:
 
 MeowthEvosAttacks:
 	db EVOLVE_LEVEL, 28, PERSIAN
-	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, GROWL
-	db 11, BITE
-	db 20, PAY_DAY
-	db 28, FAINT_ATTACK
-	db 35, SCREECH
-	db 41, FURY_SWIPES
-	db 46, SLASH
-	db 0 ; no more level-up moves
-
 PersianEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, GROWL
-	db 1, BITE
 	db 11, BITE
 	db 20, PAY_DAY
 	db 28, FAINT_ATTACK
 	db 33, SLASH
 	db 38, SCREECH
 	db 41, FURY_SWIPES
+	db 44, NASTY_PLOT
 	db 46, DOUBLE_EDGE
 	db 50, HYPER_BEAM
 	db 0 ; no more level-up moves
@@ -1306,32 +1295,19 @@ OnixEvosAttacks:
 
 DrowzeeEvosAttacks:
 	db EVOLVE_LEVEL, 26, HYPNO
-	db 0 ; no more evolutions
-	db 1, POUND
-	db 1, HYPNOSIS
-	db 10, DISABLE
-	db 18, CONFUSION
-	db 25, HEADBUTT
-	db 31, POISON_GAS
-	db 36, MEDITATE
-	db 40, PSYCHIC_M
-	db 43, PSYCH_UP
-	db 45, FUTURE_SIGHT
-	db 0 ; no more level-up moves
-
 HypnoEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POUND
 	db 1, HYPNOSIS
-	db 1, DISABLE
-	db 1, CONFUSION
 	db 10, DISABLE
+	db 13, HEADBUTT
 	db 18, CONFUSION
-	db 25, HEADBUTT
-	db 33, POISON_GAS
-	db 40, MEDITATE
+	db 20, MEDITATE
+	db 25, PSYCH_UP
+	db 29, POISON_GAS
+	db 33, FAINT_ATTACK
 	db 42, PSYCHIC_M
-	db 55, PSYCH_UP
+	db 55, NASTY_PLOT
 	db 60, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
@@ -1644,20 +1620,6 @@ SeadraEvosAttacks:
 
 GoldeenEvosAttacks:
 	db EVOLVE_LEVEL, 28, SEAKING
-	db 0 ; no more evolutions
-	db 1, TAIL_WHIP
-	db 1, PECK
-	db 5, WATER_GUN
-	db 10, SUPERSONIC
-	db 12, HORN_ATTACK
-	db 15, WATERFALL
-	db 20, FLAIL
-	db 24, FURY_ATTACK
-	db 35, MEGAHORN
-	db 43, DRILL_PECK
-	db 48, AGILITY
-	db 0 ; no more level-up moves
-
 SeakingEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PECK
@@ -1666,7 +1628,7 @@ SeakingEvosAttacks:
 	db 10, SUPERSONIC
 	db 12, HORN_ATTACK
 	db 15, WATERFALL
-	db 20, FLAIL
+	db 20, REVERSAL
 	db 24, FURY_ATTACK
 	db 30, DRILL_PECK
 	db 35, MEGAHORN
@@ -1820,7 +1782,7 @@ MagikarpEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SPLASH
 	db 15, TACKLE
-	db 30, FLAIL
+	db 30, REVERSAL
 	db 0 ; no more level-up moves
 
 GyaradosEvosAttacks:
@@ -2411,30 +2373,18 @@ CrobatEvosAttacks:
 
 ChinchouEvosAttacks:
 	db EVOLVE_LEVEL, 27, LANTURN
-	db 0 ; no more evolutions
-	db 1, BUBBLE
-	db 1, THUNDER_WAVE
-	db 5, SUPERSONIC
-	db 13, FLAIL
-	db 17, WATER_GUN
-	db 20, SPARK
-	db 29, CONFUSE_RAY
-	db 37, TAKE_DOWN
-	db 41, HYDRO_PUMP
-	db 0 ; no more level-up moves
-
 LanturnEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BUBBLE
 	db 1, THUNDER_WAVE
-	db 1, SUPERSONIC
 	db 5, SUPERSONIC
-	db 13, FLAIL
+	db 13, REVERSAL
 	db 17, WATER_GUN
-	db 25, SPARK
-	db 33, CONFUSE_RAY
+	db 20, SPARK
+	db 29, CONFUSE_RAY
 	db 35, THUNDERBOLT
-	db 40, TAKE_DOWN
+	db 38, BUBBLEBEAM
+	db 40, BODY_SLAM
 	db 45, RAIN_DANCE
 	db 52, THUNDER
 	db 58, HYDRO_PUMP
@@ -2609,7 +2559,7 @@ SudowoodoEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, ROCK_THROW
 	db 1, MIMIC
-	db 10, FLAIL
+	db 10, REVERSAL
 	db 19, LOW_KICK
 	db 28, ROCK_SLIDE
 	db 31, COUNTER
@@ -2806,6 +2756,7 @@ MurkrowEvosAttacks:
 	db 22, WING_ATTACK
 	db 26, NIGHT_SHADE
 	db 31, FAINT_ATTACK
+	db 34, NASTY_PLOT
 	db 36, DRILL_PECK
 	db 41, MEAN_LOOK
 	db 53, WINDSTORM
@@ -2820,6 +2771,7 @@ SlowkingEvosAttacks:
 	db 20, CONFUSION
 	db 29, DISABLE
 	db 34, HEADBUTT
+	db 39, NASTY_PLOT
 	db 43, SWAGGER
 	db 45, PSYCHIC_M
 	db 50, FUTURE_SIGHT
@@ -2867,6 +2819,7 @@ GirafarigEvosAttacks:
 	db 30, BATON_PASS
 	db 41, PSYCHIC_M
 	db 46, CRUNCH
+	db 51, NASTY_PLOT
 	db 0 ; no more level-up moves
 
 PinecoEvosAttacks:
@@ -3216,6 +3169,7 @@ HoundoomEvosAttacks:
 	db 35, HOWL
 	db 38, FLAMETHROWER
 	db 46, CRUNCH
+	db 51, NASTY_PLOT
 	db 0 ; no more level-up moves
 
 KingdraEvosAttacks:
@@ -3235,30 +3189,20 @@ KingdraEvosAttacks:
 
 PhanpyEvosAttacks:
 	db EVOLVE_LEVEL, 25, DONPHAN
-	db 0 ; no more evolutions
+DonphanEvosAttacks:
+	db 0 ; no more evolutionsFras
+	db 1, LEER
 	db 1, TACKLE
-	db 1, GROWL
 	db 7, MUD_SLAP
 	db 9, DEFENSE_CURL
 	db 14, MAGNITUDE
-	db 17, FLAIL
+	db 17, REVERSAL
 	db 25, TAKE_DOWN
-	db 33, ROLLOUT
-	db 41, ENDURE
-	db 49, DOUBLE_EDGE
-	db 0 ; no more level-up moves
-
-DonphanEvosAttacks:
-	db 0 ; no more evolutionsFras
-	db 1, HORN_ATTACK
-	db 1, GROWL
-	db 9, DEFENSE_CURL
-	db 17, FLAIL
-	db 25, MAGNITUDE
-	db 28, FURY_ATTACK
+	db 29, ENDURE
 	db 33, ROLLOUT
 	db 36, RAPID_SPIN
 	db 40, EARTHQUAKE
+	db 48, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 Porygon2EvosAttacks:

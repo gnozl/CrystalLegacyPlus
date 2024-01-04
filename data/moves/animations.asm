@@ -176,7 +176,7 @@ BattleAnimations::
 	dw BattleAnim_FlameWheel
 	dw BattleAnim_Snore
 	dw BattleAnim_Curse
-	dw BattleAnim_Flail
+	dw BattleAnim_NastyPlot
 	dw BattleAnim_Conversion2
 	dw BattleAnim_Aeroblast
 	dw BattleAnim_CottonSpore
@@ -3260,22 +3260,6 @@ BattleAnim_Curse:
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
 
-BattleAnim_Flail:
-	anim_1gfx ANIM_GFX_HIT
-	anim_call BattleAnim_TargetObj_1Row
-	anim_sound 0, 0, SFX_SUBMISSION
-	anim_bgeffect ANIM_BG_FLAIL, $0, BG_EFFECT_USER, $0
-	anim_wait 8
-	anim_obj ANIM_OBJ_HIT_YFIX, 120, 48, $0
-	anim_wait 8
-	anim_obj ANIM_OBJ_HIT_YFIX, 152, 48, $0
-	anim_wait 8
-	anim_obj ANIM_OBJ_HIT_YFIX, 136, 48, $0
-	anim_wait 8
-	anim_incbgeffect ANIM_BG_FLAIL
-	anim_call BattleAnim_ShowMon_0
-	anim_ret
-
 BattleAnim_Conversion:
 	anim_1gfx ANIM_GFX_EXPLOSION
 	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
@@ -4435,6 +4419,7 @@ BattleAnim_MirrorCoat:
 	anim_wait 32
 	anim_ret
 
+BattleAnim_NastyPlot:
 BattleAnim_PsychUp:
 	anim_1gfx ANIM_GFX_STATUS
 	anim_call BattleAnim_TargetObj_1Row

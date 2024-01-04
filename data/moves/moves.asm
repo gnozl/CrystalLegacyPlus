@@ -188,7 +188,7 @@ Moves:
 	move FLAME_WHEEL,  EFFECT_FLAME_WHEEL,        65, FIRE,         SPECIAL,  100, 25,  10
 	move SNORE,        EFFECT_SNORE,              40, NORMAL,       SPECIAL,  100, 15,  30
 	move CURSE,        EFFECT_CURSE,               0, CURSE_TYPE,   STATUS,   100, 10,   0
-	move FLAIL,        EFFECT_REVERSAL,            1, NORMAL,       PHYSICAL, 100, 15,   0
+	move NASTY_PLOT,   EFFECT_SP_ATK_UP_2,         0, DARK,         STATUS,   100, 15,   0
 	move CONVERSION2,  EFFECT_CONVERSION2,         0, NORMAL,       STATUS,   100, 30,   0
 	move AEROBLAST,    EFFECT_NORMAL_HIT,        100, FLYING,       SPECIAL,   95, 10,   0
 	move COTTON_SPORE, EFFECT_SPEED_DOWN_2,        0, GRASS,        STATUS,    85, 40,   0

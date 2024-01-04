@@ -175,7 +175,7 @@ MoveDescriptions::
 	dw FlameWheelDescription
 	dw SnoreDescription
 	dw CurseDescription
-	dw FlailDescription
+	dw NastyPlotDescription
 	dw Conversion2Description
 	dw AeroblastDescription
 	dw CottonSporeDescription
@@ -963,9 +963,9 @@ CurseDescription:
 	db   "Works differently"
 	next "for GHOST-types.@"
 
-FlailDescription:
-	db   "Stronger if the"
-	next "user's HP is low.@"
+NastyPlotDescription:
+	db   "Sharply increases"
+	next "the user's SpAtk.@"
 
 Conversion2Description:
 	db   "The user's type is"
@@ -977,7 +977,7 @@ AeroblastDescription:
 
 CottonSporeDescription:
 	db   "Sharply reduces"
-	next "the foe's SPEED.@"
+	next "the foe's Speed.@"
 
 ReversalDescription:
 	db   "Stronger if the"
@@ -1001,7 +1001,7 @@ MachPunchDescription:
 
 ScaryFaceDescription:
 	db   "Sharply reduces"
-	next "the foe's SPEED.@"
+	next "the foe's Speed.@"
 
 FaintAttackDescription:
 	db   "An attack that"
@@ -1013,7 +1013,7 @@ SweetKissDescription:
 
 BellyDrumDescription:
 	db   "Reduces own HP to"
-	next "maximize ATTACK.@"
+	next "maximize Attack.@"
 
 SludgeBombDescription:
 	db   "An attack that may"
@@ -1049,7 +1049,7 @@ PerishSongDescription:
 
 IcyWindDescription:
 	db   "An icy attack that"
-	next "lowers SPEED.@"
+	next "lowers Speed.@"
 
 DetectDescription:
 	db   "Evades attack that"

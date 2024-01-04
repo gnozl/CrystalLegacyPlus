@@ -180,7 +180,7 @@
 	const FLAME_WHEEL  ; ac
 	const SNORE        ; ad
 	const CURSE        ; ae
-	const FLAIL        ; af
+	const NASTY_PLOT   ; af
 	const CONVERSION2  ; b0
 	const AEROBLAST    ; b1
 	const COTTON_SPORE ; b2
