@@ -274,7 +274,7 @@ PidgeotEvosAttacks:
 	db 30, MUD_SLAP
 	db 36, EXTREMESPEED
 	db 42, AGILITY
-	db 47, SKY_ATTACK
+	db 47, WINDSTORM
 	db 61, MIRROR_MOVE
 	db 0 ; no more level-up moves
 
@@ -470,11 +470,11 @@ NidoranMEvosAttacks:
 	db 17, POISON_STING
 	db 23, FOCUS_ENERGY
 	db 30, FURY_ATTACK
-	db 38, HORN_DRILL
+	db 38, SLUDGE_BOMB
 	db 0 ; no more level-up moves
 
 NidorinoEvosAttacks:
-	db EVOLVE_ITEM, MOON_STONE, NIDOKING
+	db EVOLVE_LEVEL, 40, NIDOKING
 	db 0 ; no more evolutions
 	db 1, LEER
 	db 1, TACKLE
@@ -483,7 +483,7 @@ NidorinoEvosAttacks:
 	db 19, POISON_STING
 	db 27, FOCUS_ENERGY
 	db 36, FURY_ATTACK
-	db 46, HORN_DRILL
+	db 46, SLUDGE_BOMB
 	db 0 ; no more level-up moves
 
 NidokingEvosAttacks:
@@ -1678,7 +1678,7 @@ RhyhornEvosAttacks:
 	db 39, EARTHQUAKE
 	db 44, ROCK_SLIDE
 	db 49, TAKE_DOWN
-	db 55, HORN_DRILL
+	db 55, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 RhydonEvosAttacks:
@@ -1693,7 +1693,7 @@ RhydonEvosAttacks:
 	db 39, EARTHQUAKE
 	db 44, ROCK_SLIDE
 	db 54, TAKE_DOWN
-	db 65, HORN_DRILL
+	db 65, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 ChanseyEvosAttacks:
@@ -1779,7 +1779,7 @@ GoldeenEvosAttacks:
 	db 20, FLAIL
 	db 24, FURY_ATTACK
 	db 35, MEGAHORN
-	db 43, HORN_DRILL
+	db 43, DRILL_PECK
 	db 48, AGILITY
 	db 0 ; no more level-up moves
 
@@ -1795,7 +1795,7 @@ SeakingEvosAttacks:
 	db 24, FURY_ATTACK
 	db 30, DRILL_PECK
 	db 35, MEGAHORN
-	db 43, HORN_DRILL
+	db 43, DRILL_PECK
 	db 48, AGILITY
 	db 53, HYDRO_PUMP
 	db 0 ; no more level-up moves
@@ -2178,6 +2178,7 @@ ZapdosEvosAttacks:
 	db 49, DRILL_PECK
 	db 50, THUNDERBOLT
 	db 61, LIGHT_SCREEN
+	db 65, WINDSTORM
 	db 73, THUNDER
 	db 0 ; no more level-up moves
 
@@ -2481,6 +2482,7 @@ NoctowlEvosAttacks:
 	db 40, PSYCHIC_M
 	db 45, DREAM_EATER
 	db 50, FUTURE_SIGHT
+	db 60, WINDSTORM
 	db 0 ; no more level-up moves
 
 LedybaEvosAttacks:
@@ -2838,6 +2840,7 @@ JumpluffEvosAttacks:
 	db 27, MEGA_DRAIN
 	db 33, COTTON_SPORE
 	db 36, GIGA_DRAIN
+	db 45, WINDSTORM
 	db 0 ; no more level-up moves
 
 AipomEvosAttacks:
@@ -2960,6 +2963,7 @@ MurkrowEvosAttacks:
 	db 31, FAINT_ATTACK
 	db 36, DRILL_PECK
 	db 41, MEAN_LOOK
+	db 58, WINDSTORM
 	db 0 ; no more level-up moves
 
 SlowkingEvosAttacks:
@@ -3707,4 +3711,5 @@ CelebiEvosAttacks:
 	db 50, BATON_PASS
 	db 55, FUTURE_SIGHT
 	db 60, PERISH_SONG
+	db 65, WINDSTORM
 	db 0 ; no more level-up moves
