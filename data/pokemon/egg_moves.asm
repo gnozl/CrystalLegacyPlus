@@ -104,6 +104,7 @@ VulpixEggMoves:
 	db FLAIL
 	db SPITE
 	db DISABLE
+	db HOWL
 	db -1 ; end
 
 ZubatEggMoves:
@@ -197,7 +198,6 @@ AbraEggMoves:
 MachopEggMoves:
 	db LIGHT_SCREEN
 	db MEDITATE
-	db ROLLING_KICK
 	db ENCORE
 	db -1 ; end
 
@@ -781,7 +781,6 @@ SmoochumEggMoves:
 ElekidEggMoves:
 	db KARATE_CHOP
 	db BARRIER
-	db ROLLING_KICK
 	db MEDITATE
 	db CROSS_CHOP
 	db -1 ; end
