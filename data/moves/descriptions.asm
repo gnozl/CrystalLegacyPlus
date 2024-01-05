@@ -170,7 +170,7 @@ MoveDescriptions::
 	dw TripleKickDescription
 	dw ThiefDescription
 	dw SpiderWebDescription
-	dw MindReaderDescription
+	dw WillOWispDescription
 	dw NightmareDescription
 	dw FlameWheelDescription
 	dw SnoreDescription
@@ -208,7 +208,7 @@ MoveDescriptions::
 	dw RolloutDescription
 	dw FalseSwipeDescription
 	dw SwaggerDescription
-	dw MilkDrinkDescription
+	dw GunkShotDescription
 	dw SparkDescription
 	dw FuryCutterDescription
 	dw SteelWingDescription
@@ -943,9 +943,9 @@ SpiderWebDescription:
 	db   "Prevents fleeing"
 	next "or switching.@"
 
-MindReaderDescription:
-	db   "Ensures the next"
-	next "attack will hit.@"
+WillOWispDescription:
+	db   "Inflicts a burn"
+	next "with intense fire.@"
 
 NightmareDescription:
 	db   "A sleeper loses"
@@ -1095,9 +1095,9 @@ SwaggerDescription:
 	db   "Causes confusion"
 	next "and raises ATTACK.@"
 
-MilkDrinkDescription:
-	db   "Restores HP by 1/2"
-	next "the max HP.@"
+GunkShotDescription:
+	db   "Throw trash that"
+	next "poisons targets.@"
 
 SparkDescription:
 	db   "An attack that may"

@@ -22,7 +22,6 @@ MoveGrammar:
 	db REST
 	db SHARPEN
 	db SUBSTITUTE
-	db MIND_READER
 	db SNORE
 	db PROTECT
 	db SPIKES
@@ -41,7 +40,6 @@ MoveGrammar:
 	db BIDE
 	db SELFDESTRUCT
 	db AMNESIA
-	db FLAIL
 	db 0 ; end set
 
 ; 2: originally "[mon]の¯[move]¯した!" ("[mon]¯did¯[move]!")

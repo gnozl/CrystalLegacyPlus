@@ -171,7 +171,7 @@ BattleAnimations::
 	dw BattleAnim_TripleKick
 	dw BattleAnim_Thief
 	dw BattleAnim_SpiderWeb
-	dw BattleAnim_MindReader
+	dw BattleAnim_WillOWisp
 	dw BattleAnim_Nightmare
 	dw BattleAnim_FlameWheel
 	dw BattleAnim_Snore
@@ -209,7 +209,7 @@ BattleAnimations::
 	dw BattleAnim_Rollout
 	dw BattleAnim_FalseSwipe
 	dw BattleAnim_Swagger
-	dw BattleAnim_MilkDrink
+	dw BattleAnim_GunkShot
 	dw BattleAnim_Spark
 	dw BattleAnim_FuryCutter
 	dw BattleAnim_SteelWing
@@ -3157,17 +3157,28 @@ BattleAnim_SpiderWeb:
 	anim_wait 64
 	anim_ret
 
-BattleAnim_MindReader:
-	anim_1gfx ANIM_GFX_MISC
-	anim_sound 0, 1, SFX_MIND_READER
+; Will-O-Wisp animation from Pokémon Prism
+BattleAnim_WillOWisp:
+	anim_1gfx ANIM_GFX_FIRE
+	anim_bgp $1b
+	anim_sound 0, 1, SFX_SPITE
+	anim_obj ANIM_OBJ_DRAGON_RAGE, 8, 0, 11, 4, 0
+	anim_wait 48
 .loop
-	anim_obj ANIM_OBJ_MIND_READER, 132, 48, $3
-	anim_obj ANIM_OBJ_MIND_READER, 132, 48, $12
-	anim_obj ANIM_OBJ_MIND_READER, 132, 48, $20
-	anim_obj ANIM_OBJ_MIND_READER, 132, 48, $31
+	anim_sound 0, 0, SFX_SPARK
+	anim_obj ANIM_OBJ_BURNED, 17, 0,  7, 0, $a0
+	anim_obj ANIM_OBJ_BURNED, 17, 0,  7, 0, $20
+	anim_wait 8
+	anim_loop 4, .loop
 	anim_wait 16
-	anim_loop 2, .loop
+	anim_sound 0, 0, SFX_BURN
+	anim_obj ANIM_OBJ_FIRE_BLAST, 17, 0,  6, 0, $1
+	anim_obj ANIM_OBJ_FIRE_BLAST, 17, 0,  6, 0, $2
+	anim_obj ANIM_OBJ_FIRE_BLAST, 17, 0,  6, 0, $3
+	anim_obj ANIM_OBJ_FIRE_BLAST, 17, 0,  6, 0, $4
+	anim_obj ANIM_OBJ_FIRE_BLAST, 17, 0,  6, 0, $5
 	anim_wait 32
+	anim_bgp $e4
 	anim_ret
 
 BattleAnim_Nightmare:
@@ -3771,20 +3782,37 @@ BattleAnim_Swagger:
 	anim_wait 40
 	anim_ret
 
-BattleAnim_MilkDrink:
-	anim_2gfx ANIM_GFX_MISC, ANIM_GFX_BUBBLE
-	anim_call BattleAnim_TargetObj_1Row
-	anim_obj ANIM_OBJ_MILK_DRINK, 74, 104, $0
-	anim_wait 16
-	anim_bgeffect ANIM_BG_FADE_MON_TO_LIGHT_REPEATING, $0, BG_EFFECT_USER, $40
-	anim_sound 0, 0, SFX_MILK_DRINK
+;Animation & Sprite from Polished Crystal
+BattleAnim_GunkShot:
+	anim_1gfx ANIM_GFX_POISON
+	anim_bgp $f8
+	anim_bgeffect ANIM_BG_SHAKE_SCREEN_X, $85, $2, $0
+	anim_sound 6, 2, SFX_BUBBLEBEAM
+	anim_obj ANIM_OBJ_GUNKSHOT, 64, 92, $4
+	anim_wait 3
+	anim_obj ANIM_OBJ_GUNKSHOT, 64, 92, $4
+	anim_wait 3
 .loop
-	anim_obj ANIM_OBJ_RECOVER, 44, 88, $20
-	anim_wait 8
-	anim_loop 8, .loop
-	anim_wait 128
-	anim_incbgeffect ANIM_BG_FADE_MON_TO_LIGHT_REPEATING
-	anim_call BattleAnim_ShowMon_0
+	anim_obj ANIM_OBJ_SLUDGE, 132, 72, $0
+	anim_sound 6, 2, SFX_BUBBLEBEAM
+	anim_obj ANIM_OBJ_GUNKSHOT, 64, 92, $4
+	anim_wait 3
+	anim_obj ANIM_OBJ_GUNKSHOT, 64, 92, $4
+	anim_wait 3
+	anim_obj ANIM_OBJ_SLUDGE, 116, 72, $0
+	anim_sound 6, 2, SFX_BUBBLEBEAM
+	anim_obj ANIM_OBJ_GUNKSHOT, 64, 92, $4
+	anim_wait 3
+	anim_obj ANIM_OBJ_GUNKSHOT, 64, 92, $4
+	anim_wait 3
+	anim_obj ANIM_OBJ_SLUDGE, 148, 72, $0
+	anim_sound 6, 2, SFX_BUBBLEBEAM
+	anim_obj ANIM_OBJ_GUNKSHOT, 64, 92, $4
+	anim_wait 3
+	anim_obj ANIM_OBJ_GUNKSHOT, 64, 92, $4
+	anim_wait 3
+	anim_loop 4, .loop
+	anim_wait 32
 	anim_ret
 
 BattleAnim_Spark:
