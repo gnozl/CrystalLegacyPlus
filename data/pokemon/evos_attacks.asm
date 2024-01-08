@@ -440,7 +440,7 @@ NidokingEvosAttacks:
 ClefairyEvosAttacks:
 	db EVOLVE_ITEM, MOON_STONE, CLEFABLE
 	db 0 ; no more evolutions
-	db 1, POUND
+	db 1, TACKLE
 	db 1, GROWL
 	db 6, ENCORE
 	db 8, SING
@@ -455,7 +455,7 @@ ClefairyEvosAttacks:
 
 ClefableEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, POUND
+	db 1, TACKLE
 	db 1, GROWL
 	db 6, ENCORE
 	db 8, SING
@@ -491,7 +491,7 @@ JigglypuffEvosAttacks:
 	db EVOLVE_ITEM, MOON_STONE, WIGGLYTUFF
 	db 0 ; no more evolutions
 	db 1, SING
-	db 1, POUND
+	db 1, TACKLE
 	db 6, DEFENSE_CURL
 	db 9, CHARM
 	db 14, DISABLE
@@ -506,7 +506,7 @@ JigglypuffEvosAttacks:
 WigglytuffEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SING
-	db 1, POUND
+	db 1, TACKLE
 	db 6, DEFENSE_CURL
 	db 9, CHARM
 	db 14, DISABLE
@@ -1178,7 +1178,7 @@ GrimerEvosAttacks:
 	db EVOLVE_LEVEL, 38, MUK
 	db 0 ; no more evolutions
 	db 1, POISON_GAS
-	db 1, POUND
+	db 1, TACKLE
 	db 5, HARDEN
 	db 10, DISABLE
 	db 16, SLUDGE
@@ -1192,7 +1192,7 @@ MukEvosAttacks:
 	db 0 ; no more evolutions
 	; moves are not sorted by level
 	db 1, POISON_GAS
-	db 1, POUND
+	db 1, TACKLE
 	db 1, HARDEN
 	db 33, HARDEN
 	db 37, DISABLE
@@ -1271,7 +1271,7 @@ DrowzeeEvosAttacks:
 	db EVOLVE_LEVEL, 26, HYPNO
 HypnoEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, POUND
+	db 1, TACKLE
 	db 1, HYPNOSIS
 	db 10, DISABLE
 	db 13, HEADBUTT
@@ -1524,7 +1524,7 @@ RhydonEvosAttacks:
 ChanseyEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, BLISSEY
 	db 0 ; no more evolutions
-	db 1, POUND
+	db 1, TACKLE
 	db 5, GROWL
 	db 9, TAIL_WHIP
 	db 13, SOFTBOILED
@@ -1678,7 +1678,7 @@ ScytherEvosAttacks:
 
 JynxEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, POUND
+	db 1, TACKLE
 	db 1, LOVELY_KISS
 	db 1, POWDER_SNOW
 	db 1, CONFUSION
@@ -2011,6 +2011,9 @@ MoltresEvosAttacks:
 
 DratiniEvosAttacks:
 	db EVOLVE_LEVEL, 30, DRAGONAIR
+DragonairEvosAttacks:
+	db EVOLVE_LEVEL, 55, DRAGONITE
+DragoniteEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WRAP
 	db 1, LEER
@@ -2019,43 +2022,11 @@ DratiniEvosAttacks:
 	db 15, TWISTER
 	db 22, DRAGON_RAGE
 	db 29, SLAM
-	db 36, AGILITY
-	db 43, SAFEGUARD
-	db 45, OUTRAGE
-	db 57, HYPER_BEAM
-	db 0 ; no more level-up moves
-
-DragonairEvosAttacks:
-	db EVOLVE_LEVEL, 55, DRAGONITE
-	db 0 ; no more evolutions
-	db 1, WRAP
-	db 1, LEER
-	db 1, THUNDER_WAVE
-	db 1, TWISTER
-	db 8, THUNDER_WAVE
-	db 15, TWISTER
-	db 26, DRAGON_RAGE
-	db 29, SLAM
 	db 38, AGILITY
 	db 47, SAFEGUARD
 	db 50, OUTRAGE
-	db 65, HYPER_BEAM
-	db 0 ; no more level-up moves
 
-DragoniteEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, WRAP
-	db 1, LEER
-	db 1, THUNDER_WAVE
-	db 1, TWISTER
-	db 8, THUNDER_WAVE
-	db 15, TWISTER
-	db 22, DRAGON_RAGE
-	db 29, SLAM
-	db 38, AGILITY
-	db 47, SAFEGUARD
-	db 55, WING_ATTACK
-	db 56, OUTRAGE
+	db 55, DRAGON_CLAW
 	db 75, HYPER_BEAM
 	db 0 ; no more level-up moves
 
@@ -2076,7 +2047,7 @@ MewtwoEvosAttacks:
 
 MewEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, POUND
+	db 1, TACKLE
 	db 10, TRANSFORM
 	db 20, MEGA_PUNCH
 	db 30, METRONOME
@@ -2379,7 +2350,7 @@ PichuEvosAttacks:
 CleffaEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, CLEFAIRY
 	db 0 ; no more evolutions
-	db 1, POUND
+	db 1, TACKLE
 	db 1, CHARM
 	db 6, ENCORE
 	db 8, SING
@@ -2392,7 +2363,7 @@ IgglybuffEvosAttacks:
 	db 1, SING
 	db 1, CHARM
 	db 6, DEFENSE_CURL
-	db 9, POUND
+	db 9, TACKLE
 	db 14, SWEET_KISS
 	db 0 ; no more level-up moves
 
@@ -2640,7 +2611,7 @@ SunkernEvosAttacks:
 SunfloraEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, ABSORB
-	db 1, POUND
+	db 1, TACKLE
 	db 4, GROWTH
 	db 15, RAZOR_LEAF
 	db 19, SUNNY_DAY
@@ -3251,7 +3222,7 @@ SmoochumEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POWDER_SNOW
 	db 1, LICK
-	db 1, POUND
+	db 1, TACKLE
 	db 7, SWEET_KISS
 	db 17, ICY_WIND
 	db 21, CONFUSION
@@ -3294,7 +3265,7 @@ MiltankEvosAttacks:
 
 BlisseyEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, POUND
+	db 1, TACKLE
 	db 4, GROWL
 	db 7, TAIL_WHIP
 	db 10, SOFTBOILED

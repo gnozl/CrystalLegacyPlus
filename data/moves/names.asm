@@ -1,6 +1,6 @@
 MoveNames::
 	list_start MoveNames
-	li "POUND"
+	li "DRAGON CLAW"
 	li "KARATE CHOP"
 	li "DOUBLESLAP"
 	li "COMET PUNCH"
