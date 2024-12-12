@@ -670,13 +670,29 @@ _SelectDifficultyText::
 	done
 
 _SelectDifficultyNormalText::
-	text "Classic #MON."
+	text "Are you sure?"
+
+	para "Classic #MON"
+	line "rules."
 	done
 
 _SelectDifficultyHardText::
-	text "SET mode, no"
+	text "Are you sure?"
+
+	para "SET mode, no"
 	line "items in battle,"
 	cont "GYM LVL caps."
+	done
+
+_SelectDifficultyHardcoreText::
+	text "Are you sure?"
+
+	para "Hard mode, but"
+	line "#MON can't be"
+	cont "revived."
+
+	para "Wipeouts reset to"
+	line "previous save."
 	done
 
 Text_BattleEffectActivate::
@@ -1157,6 +1173,11 @@ _PlayersPCDepositItemsText::
 _PlayersPCNoRoomDepositText::
 	text "There's no room to"
 	line "store items."
+	prompt
+
+_TooImportantToDepositText::
+	text "That's too impor-"
+	line "tant to deposit!"
 	prompt
 
 _PokecenterPCTurnOnText::

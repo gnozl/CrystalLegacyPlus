@@ -89,13 +89,15 @@ MahoganyGymPryceScript:
 	end
 
 PryceScript_Defeat:
-	writetext PryceText_CherishYourPokemon
-	waitbutton
 	checkevent EVENT_BEAT_ELITE_FOUR
-	iffalse .CantRematchYet
+	iffalse .NotBeatE4
 	writetext PryceRematchText
 	yesorno
 	iftrue .PryceRematch
+	sjump .CantRematchYet
+.NotBeatE4
+	writetext PryceText_CherishYourPokemon
+	waitbutton
 .CantRematchYet:
 	closetext
 	end
@@ -298,14 +300,33 @@ PryceText_CherishYourPokemon:
 	done
 
 PryceRematchText:
-	text "Want to have a"
-	line "rematch with me?"
+	text "Ah, JOHTO"
+    line "CHAMPION!"
+
+    para "Your skills"
+    line "are indeed"
+    cont "remarkable."
+
+    para "I am impressed."
+
+    para "But even now,"
+    line "there is much"
+    cont "to learn from"
+    cont "each other."
+
+    para "I, PRYCE--the"
+    line "winter trainer--"
+
+    para "still have a"
+    line "few tricks left."
+
+    para "Want to have a"
+    line "rematch with me?"
 	done
 
 Pryce_RematchDefeatText:
-	text "Ah, I am"
-	line "yet again"
-	cont "impressed by your"
+	text "Ah, yet again I'm"
+	line "impressed by your"
 	cont "prowess."
 
 	para "With your strong"
@@ -422,14 +443,14 @@ MahoganyGymGuideText:
 	para "#MON for some"
 	line "50 years."
 
-	para "He's got a solid "
+	para "He's got a solid"
 	line "lineup of #MON"
 
 	para "to cover whatever"
 	line "you bring his way."
 
 	para "Fire is a good"
-	line "place to start"
+	line "place to start,"
 
 	para "but watch out"
 	line "for the rain!"

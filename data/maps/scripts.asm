@@ -207,12 +207,11 @@ INCLUDE "maps/ViridianPokecenter1F.asm"
 INCLUDE "maps/ViridianPokecenter2FBeta.asm"
 INCLUDE "maps/Route2NuggetHouse.asm"
 INCLUDE "maps/Route2Gate.asm"
-INCLUDE "maps/VictoryRoadGate.asm"
+INCLUDE "maps/OlivinePokecenter1F.asm"
 
 
 SECTION "Map Scripts 12", ROMX
 
-INCLUDE "maps/OlivinePokecenter1F.asm"
 INCLUDE "maps/OlivineGym.asm"
 INCLUDE "maps/OlivineTimsHouse.asm"
 INCLUDE "maps/OlivineHouseBeta.asm"
@@ -432,6 +431,7 @@ INCLUDE "maps/Route39.asm"
 INCLUDE "maps/Route40.asm"
 INCLUDE "maps/Route41.asm"
 INCLUDE "maps/Route12.asm"
+INCLUDE "maps/VictoryRoadGate.asm"
 
 
 SECTION "Map Scripts 23", ROMX

@@ -9,23 +9,6 @@ HealParty:
 	cp EGG
 	jr z, .next
 
-	; TODO Hardcore mode
-; 	; !this section doesn't work yet
-; 	; need to check if pokemon is fainted, if not jump to .notzero
-; 	ld bc, MON_HP
-;     add hl, bc
-;     ld a, [hl]
-;     cp 0
-;     jr nz, .notzero ; Pokémon is fainted, skip healing
-
-; 	; check if we are on hard mode
-; 	ld de, ENGINE_HARDCORE_MODE
-;     ld b, CHECK_FLAG
-;     farcall EngineFlagAction
-;     ld a, c
-;     or a
-;     jr nz, .next
-; .notzero
 	push hl
 	call HealPartyMon
 	pop hl
@@ -59,13 +42,46 @@ HealPartyMon:
 	ld c, l
 	dec bc
 	dec bc
-
+	; Hardcore mode, don't heal fainted pokemon
+	call CheckHardcoreMode
+    jr z, .notHardcore
+	inc bc
+	ld a, [bc]
+	dec bc
+	cp 0
+	ret z
+.notHardcore
 	ld a, [hli]
 	ld [bc], a
 	inc bc
 	ld a, [hl]
 	ld [bc], a
 
+	farcall RestoreAllPP
+	ret
+
+HealPartyMonDaycare: ; yes this suplicate code is inefficient but ehh, we're not using the extra space
+	ld a, MON_SPECIES
+	call GetPartyParamLocation
+	ld d, h
+	ld e, l
+	ld hl, MON_STATUS
+	add hl, de
+	xor a
+	ld [hli], a
+	ld [hl], a
+	ld hl, MON_MAXHP
+	add hl, de
+	; bc = MON_HP
+	ld b, h
+	ld c, l
+	dec bc
+	dec bc
+	ld a, [hli]
+	ld [bc], a
+	inc bc
+	ld a, [hl]
+	ld [bc], a
 	farcall RestoreAllPP
 	ret
 
